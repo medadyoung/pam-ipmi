@@ -7,7 +7,7 @@ sysconf_DATA = key_file ipmi_pass_32 ipmi_pass_64
 FILE_32 := ipmi_pass_32
 FILE_64 := ipmi_pass_64
 
-CP_FILE := $(FILE_$(HOST_OS_ARCH))
+CP_FILE := $(FILE_$(TARGET_OS_ARCH))
 
 install-exec-hook:
 	cp $(DESTDIR)$(sysconfdir)/$(CP_FILE) $(DESTDIR)$(sysconfdir)/ipmi_pass
